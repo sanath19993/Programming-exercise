@@ -1,7 +1,7 @@
 // Your First C++ Program
-
 #include <iostream>
-using namsespace std;
+using namespace std;
+
 int main() {
     cout << "Hello World!";
     return 0;

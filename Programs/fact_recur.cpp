@@ -1,21 +1,26 @@
+//working till 65
 #include<iostream>
+#include <cmath>
 using namespace std;
 
-int factorial(int n);
+unsigned long long factorial(unsigned long long n);
 
 int main()
 {
-    int n;
+    long long input;
 
     cout << "Enter a positive integer: ";
-    cin >> n;
+    cin >> input;
 
-    cout << "Factorial of " << n << " = " << factorial(n);
+    if(input <= 20)
+        cout << "Factorial of " << llabs(input) << " = " << factorial( llabs(input) );
+    else
+        cout << "Results are too long to calculate!";    
 
     return 0;
 }
 
-int factorial(int n)
+unsigned long long factorial(unsigned long long n)
 {
     if(n > 1)
         return n * factorial(n - 1);

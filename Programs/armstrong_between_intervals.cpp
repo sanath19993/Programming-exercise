@@ -1,9 +1,11 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
-int main()
+int main(void)
 {
-  int num1, num2, i, num, digit, sum;
+  size_t start,end, i, currentDigit, digit, sum;
+  int num1,num2;
 
   cout << "Enter first number: ";
   cin >> num1;
@@ -11,16 +13,18 @@ int main()
   cout << "Enter second number: ";
   cin >> num2;
 
-  cout << "Armstrong numbers between " << num1 << " and " << num2 << " are: " << endl;
-  for(i = num1; i <= num2; i++)
+  start = abs(num1);end = abs(num2);
+  cout << "Armstrong numbers between " << start << " and " << end << " are: " << endl;
+  for(i = start; i <= end; ++i)
   {
         sum = 0;
-        num = i;
+        currentDigit = i;
 
-        for(; num > 0; num /= 10)
+        while( currentDigit > 0 )
         {
-            digit = num % 10;
-            sum = sum + digit * digit * digit;
+            digit = currentDigit % 10;
+            sum += pow(digit,3);
+            currentDigit /= 10; 
         }
 
         if(sum == i)

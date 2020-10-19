@@ -16,7 +16,7 @@ class Complex
        }
 
        // Operator overloading
-       Complex operator - (Complex c2)
+       Complex operator - (Complex const &c2)
        {
            Complex temp;
            temp.real = real - c2.real;
@@ -38,10 +38,10 @@ int main()
 {
     Complex c1, c2, result;
 
-    cout<<"Enter first complex number:\n";
+    cout<<"Enter first complex number\n";
     c1.input();
 
-    cout<<"Enter second complex number:\n";
+    cout<<"Enter second complex number\n";
     c2.input();
 
     // In case of operator overloading of binary operators in C++ programming, 

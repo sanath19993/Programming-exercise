@@ -3,13 +3,18 @@ using namespace std;
 
 int main()
 {
-    unsigned int n;
+    unsigned n;
     unsigned long long factorial = 1;
 
     cout << "Enter a positive integer: ";
     cin >> n;
+    
+    if(n > 20){
+        cout << "Results are too long to calculate!";
+        return 0;
+    }
 
-    for(int i = 1; i <=n; ++i)
+    for(unsigned i = 1; i <=n; ++i)
     {
         factorial *= i;
     }

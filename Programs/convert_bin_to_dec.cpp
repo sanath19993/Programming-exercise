@@ -3,20 +3,20 @@
 
 using namespace std;
 
-int convertBinaryToDecimal(long long);
+int BinaryToDecimal(long long);
 
-int main()
+int main(void)
 {
     long long n;
 
     cout << "Enter a binary number: ";
     cin >> n;
  
-    cout << n << " in binary = " << convertBinaryToDecimal(n) << "in decimal";
+    cout << n << " in binary = " << BinaryToDecimal(n) << "in decimal";
     return 0;
 }
 
-int convertBinaryToDecimal(long long n)
+int BinaryToDecimal(long long n)
 {
     int decimalNumber = 0, i = 0, remainder;
     while (n!=0)

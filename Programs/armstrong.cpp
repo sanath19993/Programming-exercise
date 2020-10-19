@@ -1,26 +1,28 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
-int main() {
-    int num, originalNum, remainder, result = 0;
+int main(void) {
+    size_t  originalNum, remainder, result = 0;
+    int input;
     cout << "Enter a three-digit integer: ";
-    cin >> num;
-    originalNum = num;
+    cin >> input;
+    originalNum = abs(input);
 
     while (originalNum != 0) {
         // remainder contains the last digit
         remainder = originalNum % 10;
         
-        result += remainder * remainder * remainder;
+        result += pow(remainder,3);
         
         // removing last digit from the orignal number
         originalNum /= 10;
     }
 
-    if (result == num)
-        cout << num << " is an Armstrong number.";
+    if (result == abs(input))
+        cout << abs(input) << " is an Armstrong number.";
     else
-        cout << num << " is not an Armstrong number.";
+        cout << abs(input) << " is not an Armstrong number.";
 
     return 0;
 }

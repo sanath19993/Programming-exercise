@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int n, i;
+    unsigned long long n, i;
 
     cout << "Enter a positive integer: ";
     cin >> n;
